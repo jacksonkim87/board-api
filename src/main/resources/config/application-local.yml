@@ -1,0 +1,13 @@
+##############
+### local
+##############
+
+server:
+ port: 8001 
+
+
+
+logging:
+  level:  
+    com.example.board: INFO 
+    

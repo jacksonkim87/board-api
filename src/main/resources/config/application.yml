@@ -1,0 +1,17 @@
+
+#############
+### 공통 
+##############
+
+
+
+
+spring:
+  application:
+    name: board-api
+  
+  profiles:
+    active: local
+    
+
+  
