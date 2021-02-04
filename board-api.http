@@ -4,5 +4,37 @@ GET http://localhost:8001/api/boards/version
 GET http://localhost:8001/api/boards
 
 ###
-GET http://localhost:8001/api/boards/10
+GET http://localhost:8001/api/boards/20
+
+###
+POST http://localhost:8001/api/boards
+Content-Type: application/json
+
+{  
+  "title": "test22",
+  "contents": "test22",
+  "writeId": "user1",
+  "writeName": "사용자1",
+  "writeDate": "2020-11-07 10:32:56"
+}
+
+
+###
+PUT http://localhost:8001/api/boards
+Content-Type: application/json
+
+{  
+  "num": 20,
+  "title": "test22-수정22",
+  "contents": "test22-수정22",
+  "writeId": "user1",
+  "writeName": "사용자1",
+  "writeDate": "2020-11-07 10:32:56",
+  "modifyId": "user1",
+  "modifyName": "사용자1",
+  "modifyDate": "2020-11-07 10:34:56"
+}
+
+###
+DELETE http://localhost:8001/api/boards/20
 
