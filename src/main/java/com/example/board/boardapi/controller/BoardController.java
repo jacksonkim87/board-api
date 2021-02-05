@@ -89,7 +89,7 @@ public class BoardController {
 	}
 
 
-	@GetMapping("version")
+	@GetMapping("/version")
 	public Mono<String> version(){
 		return Mono.just("version: 0.0.10!!!!!");
 	}
