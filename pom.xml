@@ -15,6 +15,7 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>1.8</java.version>
+		<jib.maven-plugin-version>2.7.1</jib.maven-plugin-version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -74,6 +75,25 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.google.cloud.tools</groupId>
+				<artifactId>jib-maven-plugin</artifactId>
+				<version>${jib.maven-plugin-version}</version>
+				<configuration>
+					<to>
+						<credHelper>osxkeychain</credHelper>
+					</to>
+					<from>
+						<image>adoptopenjdk/openjdk8</image>
+						<!--<image>openjdk:8-jre-alpine</image> -->
+					</from>
+					<container>
+						<jvmFlags>
+							<jvmFlag>-Djava.security.egd=file:/dev/./urandom</jvmFlag>
+						</jvmFlags>
+					</container>
 				</configuration>
 			</plugin>
 		</plugins>

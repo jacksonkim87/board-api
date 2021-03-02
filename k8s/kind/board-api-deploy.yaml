@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+  name: board-api
+  namespace: api
+  labels:
+    app: board-api
+
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: board-api
+  template:
+    metadata:
+      labels:
+        app: board-api
+
+    spec:
+      containers:
+        - name: board-api
+          image: board-api
+          imagePullPolicy: Never
+          ports:
+            - name: http
+              containerPort: 8080

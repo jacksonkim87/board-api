@@ -15,7 +15,7 @@ import org.springframework.data.repository.query.Param;
 
 public interface BoardRepository extends JpaRepository<Board, Integer>{
 
-    @Modifying
+    // @Modifying
 	@Query(value="UPDATE board b set b.title = :#{#board.title} b.contents = :#{#board.contents}, b.modify_id = :#{#board.modifyId}, b.modify_name = :#{#board.modifyName} , b.modify_date = :#{#board.modifyDate} WHERE b.num = :#{#board.num}", nativeQuery= true)
 	Integer updateBoard(@Param("board") Board board);
 }

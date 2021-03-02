@@ -91,7 +91,7 @@ public class BoardController {
 
 	@GetMapping("/version")
 	public Mono<String> version(){
-		return Mono.just("version: 0.0.10!!!!!");
+		return Mono.just("version: 0.0.12!!!!!");
 	}
 
 	private ResponseEntity<ResultMessage> getResponseEntity(Board  board) {
