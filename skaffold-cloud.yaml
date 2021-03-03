@@ -22,12 +22,12 @@ profiles:
             args:
               - -DskipTests
               - "-Djib.container.environment=SPRING_PROFILES_ACTIVE=cloud"
-    deploy:
-      kubectl:
-        manifests:
-          - k8s/cloud/board-api-deploy-hub.yaml
-          - k8s/cloud/board-api-svc.yaml
-          - k8s/cloud/mysql-deployment.yaml
+    #deploy:
+    #  kubectl:
+    #    manifests:
+    #      - k8s/cloud/board-api-deploy-hub.yaml
+    #      - k8s/cloud/board-api-svc.yaml
+    #      - k8s/cloud/mysql-deployment.yaml
 
   - name: hub-private
     build:
