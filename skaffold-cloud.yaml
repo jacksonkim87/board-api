@@ -44,7 +44,7 @@ profiles:
         manifests:
           - k8s/cloud/board-api-deploy-hub-private.yaml
           - k8s/cloud/board-api-svc.yaml
-          - k8s/cloud/mysql-deployment.yaml
+    #      - k8s/cloud/mysql-deployment.yaml
 
   - name: ecr
     build:
@@ -61,7 +61,7 @@ profiles:
         manifests:
           - k8s/cloud/board-api-deploy-ecr.yaml
           - k8s/cloud/board-api-svc.yaml
-          - k8s/cloud/mysql-deployment.yaml
+     #     - k8s/cloud/mysql-deployment.yaml
 
   - name: gcr
     build:

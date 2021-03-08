@@ -20,7 +20,8 @@ spec:
     spec:
       containers:
       - name: board-api
-        image: jacksonkim/board-api
+        #image: jacksonkim/board-api
+        image: gcr.io/durable-will-304110/board-api
         imagePullPolicy: Always
         ports:
         - name: http
@@ -59,7 +60,7 @@ spec:
   #  targetPort: http
   #  nodePort: 30081
 
-  #type: LoadBalancer
+  type: LoadBalancer
   #ports:
   #- port: 8081
 
@@ -84,6 +85,6 @@ spec:
   #  targetPort: http
   #  nodePort: 30082
 
-  #type: LoadBalancer
+  type: LoadBalancer
   #ports:
   #- port: 8082
